@@ -9,12 +9,12 @@ export default {
     titleTemplate: '%s',
     title: 'Zealoo Dashboard',
     meta: [
-      {charset: 'utf-8'},
-      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {hid: 'description', name: 'description', content: ''},
-      {name: 'format-detection', content: 'telephone=no'},
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '' },
+      { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -24,7 +24,7 @@ export default {
   plugins: [
     '~/plugins/naira',
     '~/plugins/sentenceCase',
-    '~/plugins/upperFirst'
+    '~/plugins/upperFirst',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -38,7 +38,7 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
-    'nuxt-storm'
+    'nuxt-storm',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -51,33 +51,33 @@ export default {
   ],
 
   generate: {
-    fallback: true
+    fallback: true,
   },
 
   // global router config
   router: {
     // Run the middleware/user-agent.js on every page
-    middleware: ['auth']
+    middleware: ['auth'],
   },
   env: {
-    AUTH_URL: process.env.BASE_URL
+    BASE_URL: process.env.BASE_URL,
   },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: process.env.MID_URL || 'http://localhost:5000/api'
+    baseURL: process.env.BASE_URL || 'http://localhost:5000/api',
   },
 
   // loading bar
   loading: {
     color: '#002C6E',
-    continuous: true
+    continuous: true,
     // throttle: 0
   },
 
   loadingIndicator: {
     name: 'chasing-dots',
     background: '#002C6E',
-    color: '#fff'
+    color: '#fff',
   },
 
   // transition
@@ -85,10 +85,10 @@ export default {
   //   name: 'page',
   //   mode: 'out-in'
   // },
-  pageTransition: "fade",
+  pageTransition: 'fade',
   layoutTransition: {
     name: 'my-layouts',
-    mode: 'out-in'
+    mode: 'out-in',
   },
 
   // Auth modul configuration: https://auth.nuxtjs.org/
@@ -99,25 +99,25 @@ export default {
         token: {
           property: 'token',
           required: true,
-          type: 'Bearer'
+          type: 'Bearer',
         },
         user: {
-          property: false
+          property: false,
           // autoFetch: true
         },
         endpoints: {
-          login: {url: `/auth/login`, method: 'post'},
-          logout: {url: `/auth/logout`, method: 'get'},
-          user: {url: `/auth/profile`, method: 'get'}
-        }
-      }
+          login: { url: `/auth/login`, method: 'post' },
+          logout: { url: `/auth/logout`, method: 'get' },
+          user: { url: `/auth/profile`, method: 'get' },
+        },
+      },
     },
     redirect: {
       login: '/auth/login',
       logout: '/auth/login',
       callback: `/app`,
-      home: '/app'
-    }
+      home: '/app',
+    },
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -140,7 +140,7 @@ export default {
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
-          success: colors.green.accent3
+          success: colors.green.accent3,
         },
         dark: {
           primary: '#002C6E',
@@ -149,15 +149,15 @@ export default {
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
+          success: colors.green.accent3,
+        },
+      },
     },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: ['lodash-es', 'vuetify/lib'],
-    extractCSS: true
+    extractCSS: true,
   },
 }
