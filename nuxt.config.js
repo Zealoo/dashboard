@@ -3,7 +3,7 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
-
+  target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s',
@@ -50,12 +50,15 @@ export default {
     '@nuxtjs/auth-next',
   ],
 
+  generate: {
+    fallback: true
+  },
+
   // global router config
   router: {
     // Run the middleware/user-agent.js on every page
     middleware: ['auth']
   },
-
   env: {
     AUTH_URL: process.env.BASE_URL
   },
