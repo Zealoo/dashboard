@@ -1,49 +1,21 @@
 <template>
-  <v-container>
-  </v-container>
+<v-container>
+  <AdminDashboardCards />
+</v-container>
 </template>
 
 <script>
+import AdminDashboardCards from '@/components/core/cards/AdminDashboard-Cards'
 export default {
-  name: 'IndexPage',
-  middleware: [(ctx) => {
-    return ctx.redirect('/app')
-  }],
-  data: () => ({
-    contacts: [
-      {
-        icon: 'mdi-phone',
-        label: 'phone',
-        value: '09028532576'
-      },
-      {
-        icon: 'mdi-email',
-        label: 'email',
-        value: 'mid@mid.health'
-      }
-    ]
-  }),
-  fetch() {
-    // eslint-disable-next-line no-console
-    console.log('User', this.$auth.user)
-  },
+  name: 'AdminDashboardPage',
+  components: { AdminDashboardCards },
+  layout: 'admin',
   head: {
-    title: 'Home'
+    title: 'Dashboard'
   }
 }
 </script>
 
 <style scoped>
-.full-screen {
-  /*height: 100vh;*/
-}
 
-.body-content {
-  font-size: 25px;
-}
-
-.round-card {
-  border-radius: 20px;
-  color: white;
-}
 </style>
