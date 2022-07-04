@@ -115,8 +115,8 @@ export default {
     redirect: {
       login: '/auth/login',
       logout: '/auth/login',
-      callback: `/`,
-      home: '/'
+      callback: `/app`,
+      home: '/app'
     }
   },
 

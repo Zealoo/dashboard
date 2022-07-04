@@ -99,17 +99,17 @@ export default {
       drawer: null,
       miniVariant: null,
       items: [
-        { title: 'Dashboard', icon: 'mdi-view-dashboard', to: `/` },
-        { title: 'Users', icon: 'mdi-account-multiple', to: `/users` },
-        { title: 'Communities', icon: 'mdi-account-multiple', to: `/communities` },
-        { title: 'Reported Communities', icon: 'mdi-account-multiple', to: `/community-reports` },
-        { title: 'Reported Users', icon: 'mdi-account-multiple', to: `/community-users` },
+        { title: 'Dashboard', icon: 'mdi-view-dashboard', to: `/app/` },
+        { title: 'Users', icon: 'mdi-account-multiple', to: `/app/users` },
+        { title: 'Communities', icon: 'mdi-account-multiple', to: `/app/communities` },
+        { title: 'Reported Communities', icon: 'mdi-account-multiple', to: `/app/community-reports` },
+        { title: 'Reported Users', icon: 'mdi-account-multiple', to: `/app/community-users` },
         // { title: 'Settings', icon: 'mdi-cog', to: `/app/admin/settings` }
       ],
       settings: [
-        { title: 'General', icon: 'mdi-cogs', to: '/settings' },
-        { title: 'Policy', icon: 'mdi-lock-check', to: '/settings/policy' },
-        { title: 'Terms And Condition', icon: 'mdi-shield-lock', to: '/settings/tos' },
+        { title: 'General', icon: 'mdi-cogs', to: '/app/settings' },
+        { title: 'Policy', icon: 'mdi-lock-check', to: '/app/settings/policy' },
+        { title: 'Terms And Condition', icon: 'mdi-shield-lock', to: '/app/settings/tos' },
       ]
     }
   },

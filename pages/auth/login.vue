@@ -146,7 +146,7 @@
 
 <script>
 import {Notify} from 'notiflix'
-import rules from '~/mixins/rules'
+import rules from '@/mixins/rules'
 
 export default {
   name: 'LoginPage',
